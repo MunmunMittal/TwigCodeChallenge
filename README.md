@@ -26,8 +26,8 @@ Open tasks.json for changes in configuration.
 
 import ArrayChunk.js
 
-groupArrayElements(inputArray, numberOfChunks) returns the input array
-into number of chunks passed into the function.
+groupArrayElements(inputArray, numberOfChunks) 
+returns the input array into number of chunks passed into the function.
 
 # Contributing
 
