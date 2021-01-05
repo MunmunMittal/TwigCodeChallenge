@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="ArrayChunk.js"></script>
+	</head>
+	<body>
+		<p>
+			Splice <input type="number" value="5" id="s" />
+			items into
+			<input type="number" value="3" id="n" /> chunks:
+		</p>
+
+		<pre id="e"></pre>
+	</body>
+
+	<script>
+		window.onload = function () {
+			function $(x) {
+				return document.getElementById(x);
+			}
+
+			function calculate() {
+				var s = +$('s').value,
+					a = [];
+
+				while (s--) {
+					a.unshift(s);
+				}
+				var n = +$('n').value;
+
+				$('e').textContent = JSON.stringify(
+					groupArrayElements(a, n)
+				);
+			}
+
+			$('s').addEventListener('input', calculate);
+			$('n').addEventListener('input', calculate);
+
+			calculate();
+		};
+	</script>
+</html>
